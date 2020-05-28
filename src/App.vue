@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="navigation">
+      <sidebar></sidebar>
+      <div class="main-bloc">
+        <navbar></navbar>
+        <mainblock></mainblock>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import navbar from './components/Navbar'
+import sidebar from './components/sidebar'
+import mainblock from './components/mainblock'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    navbar,
+    sidebar,
+    mainblock
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
+
+.main-bloc{
+  width: 100%;
+}
+
+.navigation{
+  display: flex;
+}
+
 </style>
